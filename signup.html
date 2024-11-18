@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="login.css"> -->
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(images/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            max-width: 650px;
+            padding: 28px;
+            margin: 0 28px;
+            border-radius: 10px;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.2);
+            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: bold;
+            text-align: left;
+            color: #fff;
+            padding-bottom: 8px;
+            border-bottom: 1px solid silver;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px 0;
+        }
+
+        .input-box {
+            display: flex;
+            flex-wrap: wrap;
+            width: 50%;
+            padding-bottom: 15px;
+        }
+
+        .input-box:nth-child(2n) {
+            justify-content: end;
+        }
+
+        .input-box label,
+        .gender-title {
+            font-weight: bold;
+            width: 95%;
+            color: #fff;
+            margin: 5px 0;
+        }
+
+        .gender-title {
+            font-size: 16px;
+        }
+
+        .input-box input {
+            width: 95%;
+            height: 40px;
+            padding: 0 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        .input-box input:is(:focus, :valid) {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .gender-category label {
+            padding: 0 20px 0 5px;
+            font-size: 14px;
+        }
+
+        .gender-category {
+            color: gainsboro;
+        }
+
+        .gender-category label,
+        .gender-category input {
+            cursor: pointer;
+        }
+
+        .alert p {
+            font-size: 14px;
+            font-style: italic;
+            color: #fff;
+            margin: 5px 0;
+            padding: 10px;
+            line-height: 1.5;
+        }
+
+        .alert a {
+            font-weight: bold;
+            text-decoration: none;
+            color: skyblue;
+        }
+
+        .alert a:hover {
+            font-weight: bold;
+            text-decoration: none;
+            color: #380036;
+        }
+
+        .button-container {
+            margin: 15px 0;
+        }
+
+        .button-container button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            display: block;
+            font-size: 20px;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            background-image: linear-gradient(to right, #aa076b, #61045f);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .button-container button:hover {
+            background-image: linear-gradient(to right, #61045f, #aa076b);
+        }
+
+        /* media queries */
+        @media (max-width: 600px) {
+            .container {
+                min-width: 280px;
+            }
+
+            .content {
+                max-height: 380px;
+                overflow: auto;
+            }
+
+            .input-box {
+                margin-bottom: 12px;
+                width: 100%;
+            }
+
+            .input-box:nth-child(2n) {
+                justify-content: space-between;
+            }
+
+            .gender-category {
+                display: flex;
+                justify-content: space-between;
+                width: 60%;
+            }
+
+            .content::-webkit-scrollbar {
+                width: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3><a href="home.html">Home</a></h3>
+        <form action="" method="post">
+            <h1>Registration</h1>
+            <div class="content">
+                <div class="input-box">
+                    <label for="name">Full Name</label>
+                    <input type="text" placeholder="Enter full name" name="name" required>
+                    <!-- <i class='bx bxs-user'></i> -->
+                </div>
+                <div class="input-box">
+                    <label for="username">Username</label>
+                    <input type="text" placeholder="Enter username" name="uname" required>
+                    <!-- <i class='bx bxs-user'></i> -->
+                </div>
+                <div class="input-box">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Enter your valid email address" name="email" required>
+                    <!-- <i class='bx bxs-user'></i> -->
+                </div>
+                <div class="input-box">
+                    <label for="Phone">Phone Number</label>
+                    <input type="text" placeholder="Enter phone number" name="phone" required>
+                    <!-- <i class='bx bxs-user'></i> -->
+                </div>
+                <div class="input-box">
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Enter new password" name="password" required>
+                    <!-- <i class='bx bxs-user'></i> -->
+                </div>
+                <div class="input-box">
+                    <label for="confirm-password">Confrim Password</label>
+                    <input type="password" placeholder="Confirm your password" name="confirmPassword" required>
+                    <!-- <i class='bx bxs-user'></i> -->
+                </div>
+                <span class="gender-title">Gender</span>
+                <div class="gender-category">
+                    <input type="radio" name="gender" id="male">
+                    <label for="male">Male</label>
+
+                    <input type="radio" name="gender" id="female">
+                    <label for="female">female</label>
+
+                    <input type="radio" name="gender" id="other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+            <div class="alert">
+                <p>By clicking Signup, you agree to our <a href="#">Terms,</a> <a href="#">Privacy Policy</a> and <a
+                        href="#">Cookies Policy.</a> You may receive SMS notifications from us and can opt out any time.
+                </p>
+            </div>
+            <div class="button-container">
+                <a href="login.html"><button>Register</button></a>
+            </div>
+            <!-- <a href="login.html">
+                <button type="submit" class="btn">Sign Up</button>
+            </a> -->
+        </form>
+    </div>
+
+    <!-- <div class="container">
+        <form action="" method="post">
+            <h2>Registration</h2>
+            <div class="content">
+                <div class="input-box">
+
+                </div>
+            </div>
+        </form>
+    </div> -->
+</body>
+
+</html>

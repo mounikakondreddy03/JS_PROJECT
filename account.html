@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- fontawesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
+
+    <style>
+        body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            min-height: 100vh;
+            font-family: "poppins", sans-serif;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+        a {
+            text-decoration: none;
+        }
+        .header-wrapper header {
+            width: 100%;
+            background: url(images/bg.jpg) no-repeat 50% 20% / cover;
+            min-height: calc(100px + 15vw);
+        }
+        .header-wrapper .cols-container .left-col {
+            padding: 25px 20px;
+            text-align: center;
+            max-width: 350px;
+            position: relative;
+            margin: 0 auto;
+        }
+        .header-wrapper .cols-container .left-col .img-container {
+            position: absolute;
+            top: -50px;
+            left: 50px;
+            transform: translateX(-50%);
+        }
+        .header-wrapper .cols-container .left-col .img-container img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            display: block;
+            border-radius: 50%;
+            box-shadow: 1px 3px 12px rgba(0, 0, 0, 0.18);
+        }
+        .header-wrapper .cols-container .left-col .img-container {
+            background: url(images/hero.jpg) no-repeat 50% 50% / cover
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>account page</h1> -->
+     <div class="header-wrapper">
+        <header></header>
+        <div class="cols-container">
+            <div class="left-col">
+                <div class="img-container">
+                    <img src="images/user-1.png" alt="Sean Parker">
+                    <span></span>
+                </div>
+                <h2>Sean Parker</h2>
+                <p>UI/IX Designer</p>
+                <p>anna@example.com</p>
+
+                <ul class="about">
+                    <li><span>4,073</span>Follwers</li>
+                    <li><span>322</span>Following</li>
+                    <li><span>200,543</span>Attractions</li>
+                </ul>
+
+                <div class="content">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam aliquid eveniet tempora! Dolorem aliquid velit ea sequi praesentium quas ad ipsam, architecto, animi, placeat corporis quos molestiae quibusdam nemo amet?
+                    </p>
+
+                    <ul>
+                        <li><i class="fa fa-twitter"></i></li>
+                        <li><i class="fa fa-pinterest"></i></li>
+                        <li><i class="fa fa-facebook-square"></i></li>
+                        <li><i class="fa fa-dribbble"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right-col">
+                <nav>
+                    <ul>
+                        <li><a href="">photos</a></li>
+                        <li><a href="">galleries</a></li>
+                        <li><a href="">groups</a></li>
+                        <li><a href="">about</a></li>
+                    </ul>
+                    <button>Follow</button>
+                </nav>
+
+                <div class="photos">
+                    <img src="#" alt="photo1">
+                    <img src="#" alt="photo1">
+                    <img src="#" alt="photo1">
+                    <img src="#" alt="photo1">
+                    <img src="#" alt="photo1">
+                    <img src="#" alt="photo1">
+                </div>
+            </div>
+        </div>
+     </div>
+</body>
+</html>
