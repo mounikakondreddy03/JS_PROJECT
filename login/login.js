@@ -1,10 +1,23 @@
 let loginEmail = document.getElementById("email")
 let loginPswd = document.getElementById("password")
+let psrdIcon = document.getElementById("passwordIcon")
+let loginForm = document.querySelector(".btn")
 
-let loginBtn = document.querySelector(".btn")
+passwordIcon.addEventListener("click", () => {
+    if(loginPswd.type === "password") {
+        loginPswd.type = "text"
+        loginPswd.classList.remove("bx-hide")
+        loginPswd.classList.add("bx-show")
+    } else {
+        loginPswd.type = "password"
+        loginPswd.classList.remove("bx-show")
+        loginPswd.classList.add("bx-hide")
+    }
+})
 
-loginBtn.addEventListener("click", (e) => {
+loginForm.addEventListener("click", (e) => {
     e.preventDefault();
+
     let loginMail = loginEmail.value;
     let loginPassword = loginPswd.value;
     let mailStorage = localStorage.getItem("email")
@@ -27,6 +40,5 @@ loginBtn.addEventListener("click", (e) => {
             title: "Oops...",
             text: "Invalid Credentails!",
           });
-        // alert("Invalid Credentails!")
     }
 })

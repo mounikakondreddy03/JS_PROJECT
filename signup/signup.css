@@ -52,6 +52,7 @@ h1 {
     flex-wrap: wrap;
     width: 50%;
     padding-bottom: 15px;
+    position: relative;
 }
 
 .input-box:nth-child(2n) {
@@ -77,12 +78,21 @@ h1 {
 .input-box input:is(:focus, :valid) {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
+
 #password i {
     position: absolute;
     right: 20px;
     top: 30%;
     transform: translate(-50%);
     font-size: 20px;
+}
+
+#passwordIcon, #confirmPasswordIcon {
+    position: absolute;
+    right: 25px;
+    top: 55%;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
 
 .alert p {

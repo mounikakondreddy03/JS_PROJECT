@@ -3,10 +3,11 @@ let userName = document.getElementById("uname")
 let email = document.getElementById("email")
 let phone = document.getElementById("phone")
 let password = document.getElementById("password")
+let passwordIcon = document.getElementById("passwordIcon")
 let confirmPassword = document.getElementById("confirmPassword")
+let confirmPasswordIcon = document.getElementById("confirmPasswordIcon")
 let Form = document.getElementById("form")
 let Register = document.querySelector("button")
-let icon=document.getElementById("icon");
 
 const nameError = document.getElementById("nameError")
 const userError = document.getElementById("userError")
@@ -14,6 +15,31 @@ const emailError = document.getElementById("emailError")
 const phoneError = document.getElementById("phoneError")
 const passwordError = document.getElementById("passwordError")
 const confirmError = document.getElementById("confirmPasswordError")
+
+passwordIcon.addEventListener("click", () => {
+    if (password.type === "password") {
+        password.type = "text"
+        password.classList.remove('bx-hide')
+        password.classList.add('bx-show')
+    } else {
+        password.type = "password"
+        password.classList.remove('bx-show')
+        password.classList.add('bx-hide')
+    }
+})
+
+confirmPasswordIcon.addEventListener("click", () => {
+    if (confirmPassword.type === "password") {
+        confirmPassword.type = "text"
+        confirmPassword.classList.remove('bx-hide')
+        confirmPassword.classList.add('bx-show')
+    } else {
+        confirmPassword.type = "password"
+        confirmPassword.classList.remove('bx-show')
+        confirmPassword.classList.add('bx-hide')
+    }
+})
+
 
 Form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -50,7 +76,7 @@ Form.addEventListener("submit", (e) => {
     else {
         userError.textContent = ""
     }
-    
+
     // if (email.value.match(emailCheck)) {
     //     emailError.textContent = "Valid Email is required"
     //     emailError.style.color = "white"
@@ -58,7 +84,7 @@ Form.addEventListener("submit", (e) => {
     // else {
     //     emailError.textContent = ""
     // }
-    
+
     if (phone.value.length < 10) {
         phoneError.textContent = "Enter Valid Phone Number"
         phoneError.style.color = "white"
@@ -72,7 +98,7 @@ Form.addEventListener("submit", (e) => {
     else {
         passwordError.textContent = ""
     }
-    
+
     if (confirmPassword.value.length <= 10) {
         confirmError.textContent = "Password must be more than 6 characters"
         confirmError.style.color = "white"
@@ -80,7 +106,7 @@ Form.addEventListener("submit", (e) => {
     else {
         confirmError.textContent = ""
     }
-    
+
     if (password.value !== confirmPassword.value) {
         confirmError.textContent = "Password and Confirm Password must be same"
         confirmError.style.color = "white"
@@ -88,19 +114,19 @@ Form.addEventListener("submit", (e) => {
     else {
         confirmError.textContent = ""
     }
-    
+
     if (password.value === confirmPassword.value && password.value.length > 5) {
         Register.disabled = true;
 
-        if(Register) {
+        if (Register) {
             Swal.fire({
-            title: "Good job!",
-            text: "You clicked the button!",
-            icon: "success"
-        });
+                title: "Good job!",
+                text: "You clicked the button!",
+                icon: "success"
+            });
         }
-        
-        window.location.href="../login/login.html"
+
+        window.location.href = "../login/login.html"
     }
     else {
         Register.disabled = false;
