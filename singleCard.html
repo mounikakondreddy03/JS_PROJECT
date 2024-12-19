@@ -4,6 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SingleCard Display</title>
+    <style>
+        /* Default styles for all screen sizes */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .singlecard {
+            text-align: center;
+            gap: 40px;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ddd;
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            max-width: 100%;
+            width: 100%;
+            max-height: auto;
+            line-height: 1.5;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .singlecard img {
+            width: 80%;
+            margin-top: 20px;
+            object-fit: contain;
+        }
+
+        .singlecard h2 {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .singlecard p {
+            color: black;
+            font-size: 18px;
+        }
+
+        .singlecard button {
+            padding: 10px 20px;
+            background-color: #ff523b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .singlecard button:hover {
+            background-color: #ff3b00;
+        }
+
+        /* Media Queries for different screen sizes */
+        /* 768px screen */
+        @media (max-width: 768px) {
+            .singlecard {
+                width: 90%;
+                padding: 10px;
+            }
+
+            .singlecard img {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .singlecard h2 {
+                font-size: 20px;
+            }
+
+            .singlecard p {
+                font-size: 16px;
+            }
+
+            .singlecard button {
+                width: 100%;
+                padding: 12px;
+                font-size: 18px;
+            }
+        }
+
+        /* 1024px screen */
+        @media (max-width: 1024px) {
+            .singlecard {
+                width: 80%;
+                padding: 15px;
+            }
+
+            .singlecard img {
+                width: 70%;
+                margin-top: 20px;
+            }
+
+            .singlecard h2 {
+                font-size: 27px;
+            }
+
+            .singlecard p {
+                font-size: 27px;
+            }
+
+            .singlecard button {
+                padding: 12px 25px;
+                font-size: 27px;
+            }
+        }
+
+        /* 1440px screen */
+        @media (max-width: 1440px) {
+            .singlecard {
+                width: 60%;
+                padding: 20px;
+            }
+
+            .singlecard img {
+                width: 50%;
+                margin-top: 20px;
+            }
+
+            .singlecard h2 {
+                font-size: 30px;
+            }
+
+            .singlecard p {
+                font-size: 27px;
+            }
+
+            .singlecard button {
+                padding: 14px 30px;
+                font-size: 27px;
+            }
+        }
+    </style>
 </head>
 <body>
     <h2>singlecard page</h2>

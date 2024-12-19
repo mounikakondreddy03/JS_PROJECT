@@ -155,11 +155,14 @@ footer .copyright {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
+        padding: 15px;
     }
 
     .navbar nav ul {
         flex-direction: column;
         margin-top: 10px;
+        width: 100%;
+        text-align: left;
     }
 
     .navbar nav ul li {
@@ -167,13 +170,20 @@ footer .copyright {
         margin-bottom: 10px;
     }
 
+    .cart-page table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+    }
     .cart-page table td {
         padding: 8px;
         font-size: 0.9rem;
     }
+
     .place_order a {
         width: 100%;
         font-size: 1rem;
+        padding: 12px 20px;
     }
 
     footer .container {
@@ -193,6 +203,18 @@ footer .copyright {
     footer .app-logo img {
         width: 80px;
         margin: 5px;
+    }
+
+    .navbar .logo img {
+        width: 120px;
+    }
+
+    footer .footer-3 ul li a {
+        font-size: 0.9rem;
+    }
+
+    footer .footer h3 {
+        font-size: 1.1rem;
     }
 }
 

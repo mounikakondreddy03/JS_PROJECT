@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <!-- fontawesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    
+
     <style>
         #shirt, #Pant, #Shoes, #Socks, #Watch, #electronics, #women, input {
             padding: 10px;
@@ -36,6 +36,46 @@
             align-items: center;
             gap: 10px;
         }
+
+        .listCat {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .listCat input {
+            padding: 10px;
+            margin-right: 10px;
+            width: 200px;
+        }
+
+        .listCat button {
+            padding: 10px 20px;
+            font-size: 14px;
+            background-color: #ff523b;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .listCat button:hover {
+            background-color: #563434;
+        }
+
+        .card {
+            width: 300px;
+            height: 400px;
+            margin: 10px;
+        }
+
+        .card #Image {
+            width: 80%;
+            height: 50%;
+        }
     </style>
 </head>
 
@@ -44,15 +84,13 @@
     <div class="container">
         <div class="navbar">
             <div class="logo">
-                <img src="./images/logo.jpg" width="200px"
-                    height="100px">
+                <img src="./images/logo.jpg" width="200px" height="100px">
             </div>
-            
+
             <nav>
                 <ul id="MenuItems">
                     <li> <a href="home.html"> Home </a> </li>
                     <li> <a href="product-details.html"> Products </a> </li>
-                    <!-- <li> <a href="account.html"> Account </a> </li> -->
                 </ul>
             </nav>
 
