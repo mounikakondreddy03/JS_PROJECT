@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SingleCard Display</title>
+</head>
+<body>
+    <h2>singlecard page</h2>
+    
+    <script>
+        const singleProduct = JSON.parse(localStorage.getItem("singleProduct"))
+        console.log(singleProduct);
+
+        let singlecard = document.createElement("div")
+        singlecard.innerHTML= `
+            <img src="${singleProduct.image}" width="40%" style="margin-top: 20px" id="Image" />
+            <h2 id="title" onclick="title()">${singleProduct.title}</h2>
+            <p id="price" style="color:black">₹${singleProduct.price}</p>
+            <p id="rating" style="color:black">Rating: ${singleProduct.rating.rate}/5</p>
+            <button id="buynow"> Buy now </button>
+        `
+        singlecard.style.textAlign = "center"
+        singlecard.style.gap = "40px"
+        singlecard.style.justifyContent = "space-between"
+        singlecard.style.alignItems = "center"
+        singlecard.style.border = "1px solid black"
+        singlecard.style.margin = "20"
+        singlecard.style.maxWidth = "auto"
+        singlecard.style.maxHeight= "auto"
+        singlecard.style.lineHeight = "1.5"
+
+        document.body.append(singlecard)
+    </script>
+</body>
+</html>

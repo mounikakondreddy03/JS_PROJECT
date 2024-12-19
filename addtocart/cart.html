@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AllProducts - Online Shopping</title>
+    <!-- <link rel="stylesheet" href="../style.css"> -->
+    <link rel="stylesheet" href="cart.css">
+    <!-- FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="navbar">
+            <div class="logo">
+                <a href="../home.html">
+                    <img src="../images/logo.jpg" width="125px" alt="Boutique Logo"> </a>
+            </div>
+
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="../home.html">Home</a></li>
+                    <li><a href="../product-details.html">Products</a></li>
+                </ul>
+            </nav>
+
+            <a href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+        </header>
+    </div>
+
+    <!-- Cart Items Section -->
+    <div class="container cart-page">
+        <table id="cartTable"></table>
+
+        <div class="total-price">
+            <h2 class="title">Payment Method</h2>
+            <table>
+                <tr>
+                    <td>Subtotal</td>
+                    <td id="subtotal">₹0.00</td>
+                </tr>
+                <tr>
+                    <td>Tax</td>
+                    <td id="tax">₹0.18</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td id="total">₹0.00</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Modified Place Order Button -->
+        <div class="place_order">
+            <a href="../buyNow/buynow.html" onclick="showLoading()">
+                Place Order <i class="fa fa-long-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and IOS mobile phones.</p>
+                <div class="app-logo">
+                    <img src="../images/play-store.png" alt="Play Store">
+                    <img src="../images/app-store.png" alt="App Store">
+                </div>
+            </div>
+
+            <div class="footer-1">
+                <img src="../images/logo-white.png" alt="White Logo">
+                <p>Our purpose is to sustainably make the pleasure and benefits of shopping accessible to everyone.</p>
+            </div>
+
+            <div class="footer-2">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+
+            <div class="footer-3">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright"><i class="fa fa-copyright"></i> Copyright 2024</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="cart.js"></script>
+</body>
+
+</html>

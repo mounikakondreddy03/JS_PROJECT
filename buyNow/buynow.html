@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="buynow.css">
 </head>
+
 <body>
     <!-- <h1>buy now page</h1> -->
     <header>
         <div class="container">
             <div class="left">
-                <a href="home.html">Home</a>
+                <a href="../home.html">Home</a>
                 <h3>BILLING ADDRESS</h3>
                 <form>
-                    Full name 
+                    <p style="color: violet;">Full name</p>
                     <input type="text" placeholder="Enter name">
-                    
-                    Email 
+
+                    <p style="color: violet;">Email</p>
                     <input type="text" placeholder="Enter email">
-                    
-                    Address 
+
+                    <p style="color: violet;">Address</p>
                     <input type="text" placeholder="Enter address">
 
-                    City 
+                    <p style="color: violet;">City</p>
                     <input type="text" placeholder="Enter City">
 
                     <div id="Zip">
                         <label>
-                            State
+                            <p style="color: violet;">State</p>
                             <select name="" id="">
                                 <option>Choose State....</option>
                                 <option>Andhra Pradesh</option>
@@ -37,9 +39,9 @@
                                 <option>Tirupathi</option>
                             </select>
                         </label>
-                        
+
                         <label>
-                            Zip code
+                            <p style="color: violet;"> Zip code</p>
                             <input type="number" name="" placeholder="Zip code">
                         </label>
                     </div>
@@ -48,20 +50,20 @@
             <div class="right">
                 <h3>PAYMENT</h3>
                 <form>
-                    Accepted Card <br>
-                    <img src="../../../Desktop/gatewayp/image/card1.png" width="100">
-                    <img src="../../../Desktop/gatewayp/image/card2.png" width="50">
+                    <p style="color: violet;">Accepted Card</p>
+                    <img src="../../../../Desktop/gatewayp/image/card1.png" width="100">
+                    <img src="../../../../Desktop/gatewayp/image/card2.png" width="50">
                     <br><br>
 
-                    Credit card number 
+                    <p style="color: violet;">Credit card number</p>
                     <input type="text" placeholder="Enter card number">
 
-                    Exp month 
+                    <p style="color: violet;">Exp month</p>
                     <input type="text" placeholder="Enter Month">
 
                     <div id="Zip">
                         <label>
-                            Exp year
+                            <p style="color: violet;">Exp year</p>
                             <select name="" id="">
                                 <option>Choose Year....</option>
                                 <option>2022</option>
@@ -70,16 +72,37 @@
                                 <option>2025</option>
                             </select>
                         </label>
-                        
+
                         <label>
-                            CVV
+                            <p style="color: violet;">CVV</p>
                             <input type="number" name="" placeholder="CVV">
                         </label>
                     </div>
                 </form>
-                <input type="submit" value="Proceed to Checkout">
+
+                <a id="Checkout">Proceed to Checkout</a>
             </div>
         </div>
     </header>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        let checkout = document.getElementById("Checkout");
+        checkout.addEventListener("click", function () {
+            Swal.fire({
+                title: "Payment Successful!",
+                text: "Your order has been processed successfully.",
+                icon: "success",
+                confirmButtonText: "Go to Home"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "../home.html";
+                }
+            });
+        });
+
+    </script>
 </body>
+
 </html>

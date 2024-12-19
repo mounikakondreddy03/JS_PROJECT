@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="signup.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" id="form">
+            <h1 style="text-align: center;">Registration</h1>
+            <div class="content">
+                <!-- fullname -->
+                 <div class="input-box">
+                    <label for="name">Full Name</label>
+                    <input type="text" placeholder="Enter full name" id="name" >
+                    <span id="nameError"></span>
+                </div> 
+
+                <!-- username -->
+                <div class="input-box">
+                    <label for="username">Username</label>
+                    <input type="text" placeholder="Enter username" id="uname" >
+                    <span id="userError"></span>
+                </div>
+
+                <!-- email -->
+                <div class="input-box">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Enter your valid email address" id="email" >
+                    <span id="emailError"></span>
+                </div>
+
+                <!-- phoneNumber -->
+                 <div class="input-box">
+                    <label for="Phone">Phone Number</label>
+                    <input type="tel" placeholder="Enter phone number" id="phone" >
+                    <span id="phoneError"></span>
+                </div> 
+
+                <!-- Password -->
+                <div class="input-box">
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Enter new password" id="password">
+                    <i class='bx bx-hide' id="icon"></i>
+                    <span id="passwordError"></span>
+                </div>
+
+                 <!-- confirmPassword  -->
+                 <div class="input-box">
+                    <label for="confirm-password">Confrim Password</label>
+                    <input type="password" placeholder="Confirm your password" id="confirmPassword" >
+                    <span id="confirmPasswordError"></span>
+                </div> 
+            </div>
+            <!-- terms&conditions -->
+            <div class="alert">
+                <p>By clicking Signup, you agree to our <a href="#">Terms,<a> <a href="#">Privacy Policy</a> and <a href="#">Cookies Policy.</a> You may receive SMS notifications from us and can opt out any time.
+                </p>
+            </div>
+            
+            <!-- signupButton -->
+            <button type="submit" class="button-container">Register</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script src="signup.js"></script>
+</body>
+
+</html>
