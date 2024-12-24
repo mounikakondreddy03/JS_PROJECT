@@ -13,13 +13,12 @@ body {
 /* navbar */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 10px;
     background: url('https://media.istockphoto.com/id/1414353282/photo/white-3d-bright-light-shadow-catwalk-display-model-walk-path-pathway-elevated-show-showtime.jpg?s=612x612&w=0&k=20&c=2dlNZn61oFhT4XZXsi63gNL6YJ6ZGGio41v6TkL4ykk=') no-repeat;
     background-size: cover;
     background-position: center;
-    /* background: whitesmoke; */
 }
 
 .navbar .logo img {
@@ -40,17 +39,16 @@ body {
 .navbar nav ul li a {
     text-decoration: none;
     color: #555;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .navbar a {
-    color: black;
+    color: white;
 }
 
 /* cart page */
 .cart-page {
     padding: 10px;
-    /* background: linear-gradient(to right, white, grey); */
 }
 
 .cart-page table {
@@ -64,8 +62,64 @@ body {
     border: 1px solid #ddd;
 }
 
+#cartTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    font-family: sans-serif, 'Times New Roman';
+    font-size: 16px;
+}
+
+.cart-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cart-info img {
+    border-radius: 5px;
+}
+
+.cart-info div {
+    font-size: 14px;
+    color: #333;
+}
+
+.cart-info p {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.cart-info sub {
+    font-size: 14px;
+    color: #777;
+}
+
+.quantity-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-controls button {
+    padding: 5px 10px;
+    font-size: 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quantity-controls button:hover {
+    background-color: #ddd;
+}
+
 .total-price {
     margin-top: 20px;
+    font-size: 18px;
+    font-family: 'Verdana', sans-serif;
+    color: #333;
 }
 
 .total-price h2 {
@@ -75,6 +129,14 @@ body {
 
 .total-price table {
     width: 100%;
+}
+
+#cartTable thead th {
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+    padding-bottom: 10px;
 }
 
 /* Place Order Button */
