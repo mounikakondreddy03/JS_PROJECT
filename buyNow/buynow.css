@@ -52,7 +52,10 @@ h3 {
     /* color: #34495e; */
 }
 
-form input[type="text"], form input[type="email"], #Zip select, #Zip input[type="number"] {
+form input[type="text"],
+form input[type="email"],
+#Zip select,
+#Zip input[type="number"] {
     width: 100%;
     padding: 0.5rem 0.7rem;
     margin: 0.5rem 0;
@@ -61,7 +64,10 @@ form input[type="text"], form input[type="email"], #Zip select, #Zip input[type=
     border-radius: 5px;
 }
 
-form input[type="text"]:focus, form input[type="email"]:focus, #Zip select:focus, #Zip input[type="number"]:focus {
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+#Zip select:focus,
+#Zip input[type="number"]:focus {
     border-color: #3498db;
 }
 
@@ -73,7 +79,8 @@ form input[type="text"]:focus, form input[type="email"]:focus, #Zip select:focus
     margin-top: 0.7rem;
 }
 
-#Zip select, #Zip input[type="number"] {
+#Zip select,
+#Zip input[type="number"] {
     width: 100%;
 }
 
@@ -121,17 +128,15 @@ form input[type="text"]:focus, form input[type="email"]:focus, #Zip select:focus
         flex-direction: column;
     }
 
-    /* #Zip select,
-    #Zip input[type="number"] {
-        width: 100%;
-    } */
-
     p {
         font-size: 1.4rem;
         margin-bottom: 0.5rem;
     }
 
-    form input[type="text"], form input[type="email"], #Zip select, #Zip input[type="number"] {
+    form input[type="text"],
+    form input[type="email"],
+    #Zip select,
+    #Zip input[type="number"] {
         font-size: 1rem;
         padding: 0.8rem;
     }
@@ -151,30 +156,6 @@ form input[type="text"]:focus, form input[type="email"]:focus, #Zip select:focus
     }
 }
 
-@media (max-width: 1440px) {
-    .container {
-        width: 1200px;
-    }
-
-    .left, .right {
-        flex-basis: 50%;
-    }
-
-    form input[type="text"],form input[type="email"], #Zip select, #Zip input[type="number"] {
-        padding: 0.8rem;
-        font-size: 1rem;
-    }
-
-    #Checkout {
-        font-size: 1.2rem;
-    }
-
-    h3 {
-        font-size: 1.5rem;
-    }
-}
-
-/* Responsive Styles for 1024px */
 @media (max-width: 1024px) {
     .container {
         flex-direction: column;
@@ -201,7 +182,10 @@ form input[type="text"]:focus, form input[type="email"]:focus, #Zip select:focus
         margin-bottom: 0.5rem;
     }
 
-    form input[type="text"], form input[type="email"], #Zip select, #Zip input[type="number"] {
+    form input[type="text"],
+    form input[type="email"],
+    #Zip select,
+    #Zip input[type="number"] {
         font-size: 1.1rem;
         padding: 1rem;
     }
@@ -218,5 +202,32 @@ form input[type="text"]:focus, form input[type="email"]:focus, #Zip select:focus
     img {
         max-width: 100%;
         height: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .container {
+        width: 1200px;
+    }
+
+    .left,
+    .right {
+        flex-basis: 50%;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    #Zip select,
+    #Zip input[type="number"] {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+
+    #Checkout {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
     }
 }
