@@ -2,6 +2,7 @@ let loginEmail = document.getElementById("email")
 let loginPswd = document.getElementById("password")
 let psrdIcon = document.getElementById("passwordIcon")
 let loginForm = document.querySelector(".btn")
+let guestLoginBtn = document.querySelector(".guest-btn")
 
 passwordIcon.addEventListener("click", () => {
     if(loginPswd.type === "password") {
@@ -41,4 +42,18 @@ loginForm.addEventListener("click", (e) => {
             text: "Invalid Credentails!",
           });
     }
+})
+
+guestLoginBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    Swal.fire({
+        title: "Welcome, Guest!",
+        text: "Redirecting to Signup page as a guest...",
+        icon: "success"
+    });
+
+    setTimeout(() => {
+        window.location.href = "../signup/signup.html";
+    }, 1000);
 })

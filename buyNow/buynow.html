@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payment Page</title>
-    <link rel="stylesheet" href="buynow.css">
+    <link rel="stylesheet" href="buynow.css" />
 </head>
 
 <body>
@@ -14,21 +14,21 @@
             <div class="left">
                 <h3>Billing Address</h3>
                 <form id="billingForm">
-                    <p style="color: violet;">Full name</p>
-                    <input type="text" placeholder="Enter name" required>
+                    <p style="color: violet">Full name</p>
+                    <input type="text" placeholder="Enter name" required />
 
-                    <p style="color: violet;">Email</p>
-                    <input type="email" placeholder="Enter email" required>
+                    <p style="color: violet">Email</p>
+                    <input type="email" placeholder="Enter email" required pattern="[a-z0-9.%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address."/>
 
-                    <p style="color: violet;">Address</p>
-                    <input type="text" placeholder="Enter address" required>
+                    <p style="color: violet">Address</p>
+                    <input type="text" placeholder="Enter address" required />
 
-                    <p style="color: violet;">City</p>
-                    <input type="text" placeholder="Enter City" required>
+                    <p style="color: violet">City</p>
+                    <input type="text" placeholder="Enter City" required />
 
                     <div id="Zip">
                         <label>
-                            <p style="color: violet;">State</p>
+                            <p style="color: violet">State</p>
                             <select name="state" id="state" required>
                                 <option value="">Choose State....</option>
                                 <option>Andhra Pradesh</option>
@@ -39,8 +39,8 @@
                         </label>
 
                         <label>
-                            <p style="color: violet;">Zip code</p>
-                            <input type="number" name="zip" placeholder="Zip code" required>
+                            <p style="color: violet">Zip code</p>
+                            <input type="number" name="zip" placeholder="Zip code" required />
                         </label>
                     </div>
                 </form>
@@ -49,20 +49,20 @@
             <div class="right">
                 <h3>PAYMENT</h3>
                 <form id="paymentForm">
-                    <p style="color: violet;">Accepted Card</p>
-                    <img src="../images/card1.png" width="100px">
-                    <img src="../images/card2.png" width="50px">
-                    <br><br>
+                    <p style="color: violet">Accepted Card</p>
+                    <img src="../images/card1.png" width="100px" />
+                    <img src="../images/card2.png" width="50px" />
+                    <br /><br />
 
-                    <p style="color: violet;">Credit card number</p>
-                    <input type="text" id="cardNumber" placeholder="Enter card number" required>
+                    <p style="color: violet">Credit card number</p>
+                    <input type="text" id="cardNumber" placeholder="Enter card number" required />
 
-                    <p style="color: violet;">Exp month</p>
-                    <input type="text" id="expMonth" placeholder="Enter Month" required>
+                    <p style="color: violet">Exp month</p>
+                    <input type="text" id="expMonth" placeholder="Enter Month" required />
 
-                    <div id="Zip">
+                    <div id="PaymentDetails">
                         <label>
-                            <p style="color: violet;">Exp year</p>
+                            <p style="color: violet">Exp year</p>
                             <select id="expYear" required>
                                 <option value="">Choose Year....</option>
                                 <option>2024</option>
@@ -76,8 +76,8 @@
                         </label>
 
                         <label>
-                            <p style="color: violet;">CVV</p>
-                            <input type="number" id="cvv" placeholder="CVV" required>
+                            <p style="color: violet">CVV</p>
+                            <input type="number" id="cvv" placeholder="CVV" required />
                         </label>
                     </div>
 
@@ -93,32 +93,39 @@
         document.getElementById("Checkout").addEventListener("click", function (e) {
             e.preventDefault();
 
-            const billingForm = document.getElementById("billingForm")
-            const paymentForm = document.getElementById("paymentForm")
+            const billingForm = document.getElementById("billingForm");
+            const paymentForm = document.getElementById("paymentForm");
 
-            if(!billingForm.checkValidity ()) {
-                Swal.fire({
-                    title: "Incomplete Billing Information",
-                    text: "Please fill out all billing details.",
-                    icon: "error",
-                    confirmButtonText: "Try Again"
-                });
-                return;
+            const billingFields = billingForm.querySelectorAll("input, select");
+            for (const field of billingFields) {
+                if (!field.checkValidity()) {
+                    Swal.fire({
+                        title: "Incomplete Billing Information",
+                        text: `Invalid input in field: ${field.placeholder || field.name}. ${field.validationMessage}`,
+                        icon: "error",
+                        confirmButtonText: "Try Again",
+                    });
+                    field.focus(); 
+                    return;
+                }
             }
-            
-            if (!paymentForm.checkValidity()) {
-                Swal.fire({
-                    title: "Incomplete Payment Information",
-                    text: "Please fill out all payment details.",
-                    icon: "error",
-                    confirmButtonText: "Try Again"
-                });
-                return;
+
+            const paymentFields = paymentForm.querySelectorAll("input, select");
+            for (const field of paymentFields) {
+                if (!field.checkValidity()) {
+                    Swal.fire({
+                        title: "Incomplete Payment Information",
+                        text: `Invalid input in field: ${field.placeholder || field.name}. ${field.validationMessage}`,
+                        icon: "error",
+                        confirmButtonText: "Try Again",
+                    });
+                    field.focus();
+                    return;
+                }
             }
-            
-            const cardNumber = document.getElementById("cardNumber").value;
+
+            const cardNumber = document.getElementById("cardNumber").value.replace(/-/g, "");
             const expMonth = document.getElementById("expMonth").value;
-            const expYear = document.getElementById("expYear").value;
             const cvv = document.getElementById("cvv").value;
 
             if (!/^\d{16}$/.test(cardNumber)) {
@@ -126,7 +133,7 @@
                     title: "Invalid Card Number",
                     text: "Please enter a valid 16-digit credit card number.",
                     icon: "error",
-                    confirmButtonText: "Try Again"
+                    confirmButtonText: "Try Again",
                 });
                 return;
             }
@@ -136,7 +143,7 @@
                     title: "Invalid Expiry Month",
                     text: "Please enter a valid expiry month (01-12).",
                     icon: "error",
-                    confirmButtonText: "Try Again"
+                    confirmButtonText: "Try Again",
                 });
                 return;
             }
@@ -146,7 +153,7 @@
                     title: "Invalid Expiry Year",
                     text: "Please select an expiry year.",
                     icon: "error",
-                    confirmButtonText: "Try Again"
+                    confirmButtonText: "Try Again",
                 });
                 return;
             }
@@ -156,7 +163,7 @@
                     title: "Invalid CVV",
                     text: "Please enter a valid 3-digit CVV.",
                     icon: "error",
-                    confirmButtonText: "Try Again"
+                    confirmButtonText: "Try Again",
                 });
                 return;
             }
@@ -165,7 +172,7 @@
                 title: "Payment Successful!",
                 text: "Your order has been processed successfully.",
                 icon: "success",
-                confirmButtonText: "Go to Home"
+                confirmButtonText: "Go to Home",
             }).then((result) => {
                 if (result.isConfirmed) {
                     window.location.href = "../home.html";
