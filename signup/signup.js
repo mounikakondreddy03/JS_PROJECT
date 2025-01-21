@@ -58,9 +58,6 @@ Form.addEventListener("submit", (e) => {
     localStorage.setItem("password", pswd)
     localStorage.setItem("confirmPswd", confirmPswd)
 
-    // let nameCheck = /^[a-zA-Z]{3,}$/
-    // let emailCheck = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{5,})$/;
-
     if (fullName.value === '' || fullName.value == null) {
         nameError.textContent = "Name is required"
         nameError.style.color = "white"
@@ -76,14 +73,6 @@ Form.addEventListener("submit", (e) => {
     else {
         userError.textContent = ""
     }
-
-    // if (email.value.match(emailCheck)) {
-    //     emailError.textContent = "Valid Email is required"
-    //     emailError.style.color = "white"
-    // }
-    // else {
-    //     emailError.textContent = ""
-    // }
 
     if (phone.value.length < 10) {
         phoneError.textContent = "Enter Valid Phone Number"

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SingleCard Display</title>
     <style>
-        /* Default styles for all screen sizes */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -64,8 +64,7 @@
             background-color: #ff3b00;
         }
 
-        /* Media Queries for different screen sizes */
-        /* 768px screen */
+        /* Media Queries */
         @media (max-width: 768px) {
             .singlecard {
                 width: 90%;
@@ -92,7 +91,6 @@
             }
         }
 
-        /* 1024px screen */
         @media (max-width: 1024px) {
             .singlecard {
                 width: 80%;
@@ -118,7 +116,6 @@
             }
         }
 
-        /* 1440px screen */
         @media (max-width: 1440px) {
             .singlecard {
                 width: 60%;
@@ -145,15 +142,16 @@
         }
     </style>
 </head>
+
 <body>
     <h2>singlecard page</h2>
-    
+
     <script>
         const singleProduct = JSON.parse(localStorage.getItem("singleProduct"))
         console.log(singleProduct);
 
         let singlecard = document.createElement("div")
-        singlecard.innerHTML= `
+        singlecard.innerHTML = `
             <img src="${singleProduct.image}" width="40%" style="margin-top: 20px" id="Image" />
             <h2 id="title" onclick="title()">${singleProduct.title}</h2>
             <p id="price" style="color:black">₹${singleProduct.price}</p>
@@ -167,10 +165,11 @@
         singlecard.style.border = "1px solid black"
         singlecard.style.margin = "20"
         singlecard.style.maxWidth = "auto"
-        singlecard.style.maxHeight= "auto"
+        singlecard.style.maxHeight = "auto"
         singlecard.style.lineHeight = "1.5"
 
         document.body.append(singlecard)
     </script>
 </body>
+
 </html>

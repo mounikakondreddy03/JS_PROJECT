@@ -5,7 +5,7 @@ let loginForm = document.querySelector(".btn")
 let guestLoginBtn = document.querySelector(".guest-btn")
 
 passwordIcon.addEventListener("click", () => {
-    if(loginPswd.type === "password") {
+    if (loginPswd.type === "password") {
         loginPswd.type = "text"
         loginPswd.classList.remove("bx-hide")
         loginPswd.classList.add("bx-show")
@@ -24,23 +24,23 @@ loginForm.addEventListener("click", (e) => {
     let mailStorage = localStorage.getItem("email")
     let pswdStorage = localStorage.getItem("password")
 
-    if(loginMail == mailStorage && loginPassword == pswdStorage) {
+    if (loginMail == mailStorage && loginPassword == pswdStorage) {
         Swal.fire({
             title: "Good job!",
             text: "Redirecting to Home page!!!!!!",
             icon: "success"
         });
 
-        setTimeout(()=> {
-            window.location.href="../home.html"
-        },1000)
+        setTimeout(() => {
+            window.location.href = "../home.html"
+        }, 1000)
     }
     else {
         Swal.fire({
             icon: "error",
             title: "Oops...",
             text: "Invalid Credentails!",
-          });
+        });
     }
 })
 

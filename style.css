@@ -382,7 +382,7 @@ i>.container {
 }
 
 
-/* media queries  for Mobile styles*/
+/* media queries*/
 @media (max-width: 768px) {
     .navbar {
         display: flex;
@@ -524,15 +524,12 @@ i>.container {
 }
 
 @media (max-width: 1024px) {
-
-    /* Tablet styles */
     .navbar {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
         font-size: 1.5rem;
-        /* margin-top: 25px; */
     }
 
     .menu-icon {
@@ -594,8 +591,6 @@ i>.container {
 }
 
 @media (max-width: 1440px) {
-
-    /* Large tablet / Small desktop styles */
     .container {
         max-width: 1200px;
     }

@@ -343,7 +343,7 @@ let cardsContainer = document.getElementById("ccc")
 
 function cardsDisplays(filteredData) {
     cardsContainer.innerHTML = ""
-    
+
     filteredData.forEach((i) => {
         let card = document.createElement("div");
         card.className = "card"
@@ -378,37 +378,37 @@ function cardsDisplays(filteredData) {
 
         let cart = card.querySelector("#cart")
         cart.style.padding = "5px"
-    
+
         cart.addEventListener("click", (e) => {
-        console.log("clicked")
-        e.stopImmediatePropagation()
-        
-        let cartItems=JSON.parse(localStorage.getItem("cartItems")) || []
-        cartItems.push(i) 
-        
-        localStorage.setItem("cartItems",JSON.stringify(cartItems))
-        location.href ="../addtocart/cart.html"
+            console.log("clicked")
+            e.stopImmediatePropagation()
 
-        let conformData = confirm("add to cart clicked")
-        if (conformData) {
-            Swal.fire({
-                title: "Good job!",
-                text: "You clicked the button!",
-                icon: "success"
-            });
-        }
-        else {
-            location.href="product-details.html"
-        }
-    })
+            let cartItems = JSON.parse(localStorage.getItem("cartItems")) || []
+            cartItems.push(i)
 
-    card.addEventListener("click", (e) => {
-        console.log("clicked")
-        e.stopPropagation()
+            localStorage.setItem("cartItems", JSON.stringify(cartItems))
+            location.href = "../addtocart/cart.html"
 
-        localStorage.setItem("singleProduct", JSON.stringify(i))
-        location.href = "singleCard.html"
-    })
+            let conformData = confirm("add to cart clicked")
+            if (conformData) {
+                Swal.fire({
+                    title: "Good job!",
+                    text: "You clicked the button!",
+                    icon: "success"
+                });
+            }
+            else {
+                location.href = "product-details.html"
+            }
+        })
+
+        card.addEventListener("click", (e) => {
+            console.log("clicked")
+            e.stopPropagation()
+
+            localStorage.setItem("singleProduct", JSON.stringify(i))
+            location.href = "singleCard.html"
+        })
 
         BuyNow = card.querySelector("#buynow")
         BuyNow.style.padding = "5px"
@@ -448,19 +448,19 @@ data.forEach((i) => {
 
     let cart = card.querySelector("#cart")
     cart.style.padding = "5px"
-    
+
     cart.addEventListener("click", (e) => {
         console.log("clicked")
         e.stopImmediatePropagation()
-        
-        let cartItems=JSON.parse(localStorage.getItem("cartItems")) || []
+
+        let cartItems = JSON.parse(localStorage.getItem("cartItems")) || []
         cartItems.push(i)
-        
-        localStorage.setItem("cartItems",JSON.stringify(cartItems))
-        location.href ="./addtocart/cart.html"
+
+        localStorage.setItem("cartItems", JSON.stringify(cartItems))
+        location.href = "./addtocart/cart.html"
 
         let conformData = confirm("add to cart clicked")
-        
+
         if (conformData) {
             Swal.fire({
                 title: "Good job!",
@@ -469,7 +469,7 @@ data.forEach((i) => {
             });
         }
         else {
-            location.href="product-details.html"
+            location.href = "product-details.html"
         }
     })
 
@@ -503,9 +503,9 @@ data.forEach((i) => {
 
     let BuyNow = card.querySelector("#buynow")
     BuyNow.style.padding = "5px"
-    
+
     BuyNow.addEventListener("click", () => {
-        location.href="../addtocart/cart.html"
+        location.href = "../addtocart/cart.html"
     })
 
     cardsContainer.style.display = "flex"
