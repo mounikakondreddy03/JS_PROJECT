@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SingleCard Display</title>
+    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -152,7 +153,7 @@
 
         let singlecard = document.createElement("div")
         singlecard.innerHTML = `
-            <img src="${singleProduct.image}" width="40%" style="margin-top: 20px" id="Image" />
+            <img src="${singleProduct.image}" width="30%" style="margin-top: 20px" id="Image" />
             <h2 id="title" onclick="title()">${singleProduct.title}</h2>
             <p id="price" style="color:black">₹${singleProduct.price}</p>
             <p id="rating" style="color:black">Rating: ${singleProduct.rating.rate}/5</p>

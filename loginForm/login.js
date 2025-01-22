@@ -32,7 +32,7 @@ loginForm.addEventListener("click", (e) => {
         });
 
         setTimeout(() => {
-            window.location.href = "../home.html"
+            window.location.href = "../homePage.html"
         }, 1000)
     }
     else {
@@ -54,6 +54,6 @@ guestLoginBtn.addEventListener("click", (e) => {
     });
 
     setTimeout(() => {
-        window.location.href = "../signup/signup.html";
+        window.location.href = "../signupForm/signup.html";
     }, 1000);
 })

@@ -115,7 +115,7 @@ Form.addEventListener("submit", (e) => {
             });
         }
 
-        window.location.href = "../login/login.html"
+        window.location.href = "../loginForm/login.html"
     }
     else {
         Register.disabled = false;

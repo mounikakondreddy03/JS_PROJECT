@@ -1,7 +1,7 @@
 let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
 cartItems = cartItems.map(item => ({
-    image: item.image || "../images/product-1.jpg",
+    image: item.image || "../image/product-1.jpg",
     title: item.title || "Unnamed Product",
     price: Number(item.price) || 0,
     quantity: Number(item.quantity) || 1
