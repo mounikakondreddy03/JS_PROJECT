@@ -77,9 +77,11 @@ Form.addEventListener("submit", (e) => {
     if (phone.value.length < 10) {
         phoneError.textContent = "Enter Valid Phone Number"
         phoneError.style.color = "white"
-    } else {
+    } 
+    else {
         phoneError.textContent = ""
     }
+    
     if (password.value.length <= 5) {
         passwordError.textContent = "Password must be mor than 6 characters"
         passwordError.style.color = "white"
