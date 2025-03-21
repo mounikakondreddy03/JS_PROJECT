@@ -1,12 +1,14 @@
 let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
 cartItems = cartItems.map(item => ({
-    image: item.image || "../image/product-1.jpg",
+    
+    image: item.image?item.image: "http://127.0.0.1:5500/image/app-store.png",
     title: item.title || "Unnamed Product",
     price: Number(item.price) || 0,
     quantity: Number(item.quantity) || 1
 }));
 
+console.log(cartItems[0].image,"itme image")
 function renderCartItems() {
     const tableBody = document.querySelector("#cartTable");
     tableBody.innerHTML = `
@@ -30,6 +32,7 @@ function renderCartItems() {
         row.innerHTML = `
             <td>
                 <div class="cart-info">
+
                     <img src="${item.image}" alt="${item.title}" style="width: 50px; height: 50px;">
                     <div>
                         <p>${item.title}</p>
@@ -126,7 +129,6 @@ function showLoading() {
         },
     });
 }
-
 
 function saveCartToLocalStorage() {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));

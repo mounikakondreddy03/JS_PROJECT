@@ -5,7 +5,7 @@ const data = [
         "price": 1299,
         "description": "Give your summer wardrobe a style upgrade with the HRX Men's Active T-Shirt. Team it with a pair of shorts for your morning workout or a denims for an evening out with the guys.",
         "category": "T-Shirt",
-        "image": "./image/product-1.jpg",
+        "image": "http://127.0.0.1:5500/image/product-1.jpg",
         "rating": {
             "rate": 3.9,
             "count": 120
@@ -17,7 +17,7 @@ const data = [
         "price": 999,
         "description": "Give your summer wardrobe a style upgrade with the HRX Men's Active T-Shirt. Team it with a pair of shorts for your morning workout or a denims for an evening out with the guys.",
         "category": "Shoes",
-        "image": "./image/product-2.jpg",
+        "image": "http://127.0.0.1:5500/image/product-2.jpg",
         "rating": {
             "rate": 4.1,
             "count": 259
@@ -29,7 +29,7 @@ const data = [
         "price": 250,
         "description": "Give your summer wardrobe a style upgrade with the HRX Men's Active T-Shirt. Team it with a pair of shorts for your morning workout or a denims for an evening out with the guys.",
         "category": "Trousers",
-        "image": "./image/product-3.jpg",
+        "image": "http://127.0.0.1:5500/image/product-3.jpg",
         "rating": {
             "rate": 4.7,
             "count": 500
@@ -41,7 +41,7 @@ const data = [
         "price": 100,
         "description": "Give your summer wardrobe a style upgrade with the HRX Men's Active T-Shirt. Team it with a pair of shorts for your morning workout or a denims for an evening out with the guys.",
         "category": "T-Shirt",
-        "image": "./image/product-4.jpg",
+        "image": "http://127.0.0.1:5500/image/product-4.jpg",
         "rating": {
             "rate": 2.1,
             "count": 430
@@ -53,7 +53,7 @@ const data = [
         "price": 250,
         "description": "Give your summer wardrobe a style upgrade with the HRX Men's Active T-Shirt. Team it with a pair of shorts for your morning workout or a denims for an evening out with the guys.",
         "category": "Shoes",
-        "image": "./image/product-5.jpg",
+        "image": "http://127.0.0.1:5500/image/product-5.jpg",
         "rating": {
             "rate": 4.6,
             "count": 400
@@ -65,7 +65,7 @@ const data = [
         "price": 320,
         "description": "Give your summer wardrobe a style upgrade with the HRX Men's Active T-Shirt. Team it with a pair of shorts for your morning workout or a denims for an evening out with the guys.",
         "category": "T-Shirt",
-        "image": "./image/product-6.jpg",
+        "image": "http://127.0.0.1:5500/image/product-6.jpg",
         "rating": {
             "rate": 3.9,
             "count": 70
@@ -77,7 +77,7 @@ const data = [
         "price": 70,
         "description": "Give your summer wardrobe a style upgrade with the HRX Men's Active T-Shirt. Team it with a pair of shorts for your morning workout or a denims for an evening out with the guys.",
         "category": "socks",
-        "image": "./image/product-7.jpg",
+        "image": "http://127.0.0.1:5500/image/product-7.jpg",
         "rating": {
             "rate": 3,
             "count": 400
@@ -89,7 +89,7 @@ const data = [
         "price": 999,
         "description": "Give your summer wardrobe a style upgrade with the HRX Men's Active T-Shirt. Team it with a pair of shorts for your morning workout or a denims for an evening out with the guys.",
         "category": "watch",
-        "image": "./image/product-8.jpg",
+        "image": "http://127.0.0.1:5500/image/product-8.jpg",
         "rating": {
             "rate": 1.9,
             "count": 100
@@ -101,7 +101,7 @@ const data = [
         "price": 800,
         "description": "Give your summer wardrobe a style upgrade with the HRX Men's Active T-Shirt. Team it with a pair of shorts for your morning workout or a denims for an evening out with the guys.",
         "category": "watch",
-        "image": "./image/product-9.jpg",
+        "image": "http://127.0.0.1:5500/image/product-9.jpg",
         "rating": {
             "rate": 3.3,
             "count": 203
@@ -113,7 +113,7 @@ const data = [
         "price": 700,
         "description": "Give your summer wardrobe a style upgrade with the HRX Men's Active T-Shirt. Team it with a pair of shorts for your morning workout or a denims for an evening out with the guys.",
         "category": "Shoes",
-        "image": "./image/product-10.jpg",
+        "image": "http://127.0.0.1:5500/image/product-10.jpg",
         "rating": {
             "rate": 2.9,
             "count": 470
@@ -125,7 +125,7 @@ const data = [
         "price": 600,
         "description": "Give your summer wardrobe a style upgrade with the HRX Men's Active T-Shirt. Team it with a pair of shorts for your morning workout or a denims for an evening out with the guys.",
         "category": "Shoes",
-        "image": "./image/product-11.jpg",
+        "image": "http://127.0.0.1:5500/image/product-11.jpg",
         "rating": {
             "rate": 4.8,
             "count": 319
@@ -137,7 +137,7 @@ const data = [
         "price": 300,
         "description": "Give your summer wardrobe a style upgrade with the HRX Men's Active T-Shirt. Team it with a pair of shorts for your morning workout or a denims for an evening out with the guys.",
         "category": "Trousers",
-        "image": "./image/product-12.jpg",
+        "image": "http://127.0.0.1:5500/image/product-12.jpg",
         "rating": {
             "rate": 4.8,
             "count": 400
@@ -387,7 +387,7 @@ function cardsDisplays(filteredData) {
             cartItems.push(i)
 
             localStorage.setItem("cartItems", JSON.stringify(cartItems))
-            location.href = "../addtocartPage/cart.html"
+            location.href = ".http://127.0.0.1:5500/addtocartPage/cart.html"
 
             let conformData = confirm("add to cart clicked")
             if (conformData) {
@@ -457,7 +457,7 @@ data.forEach((i) => {
         cartItems.push(i)
 
         localStorage.setItem("cartItems", JSON.stringify(cartItems))
-        location.href = "./addtocartPage/cart.html"
+        location.href = "http://127.0.0.1:5500/addtocartPage/cart.html"
 
         let conformData = confirm("add to cart clicked")
 
@@ -505,7 +505,7 @@ data.forEach((i) => {
     BuyNow.style.padding = "5px"
 
     BuyNow.addEventListener("click", () => {
-        location.href = "../addtocartPage/cart.html"
+        location.href = ".http://127.0.0.1:5500/addtocartPage/cart.html"
     })
 
     cardsContainer.style.display = "flex"

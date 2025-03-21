@@ -74,6 +74,7 @@ document.getElementById("Checkout").addEventListener("click", function (e) {
             confirmButtonText: "Try Again",
         });
         return;
+        
     }
 
     Swal.fire({
@@ -83,7 +84,7 @@ document.getElementById("Checkout").addEventListener("click", function (e) {
         confirmButtonText: "Go to Home",
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location.href = "../home.html";
+            window.location.href = "../homePage.html";
         }
     });
 });
